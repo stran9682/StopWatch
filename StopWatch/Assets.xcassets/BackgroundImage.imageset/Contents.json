@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "someone-took-a-bite-out-of-this-deodorant-i-dont-think-itd-v0-l13y6ojnuzqe1.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
