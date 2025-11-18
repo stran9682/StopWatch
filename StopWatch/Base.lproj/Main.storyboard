@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,48 +12,30 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StopWatch" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gDK-AQ-NsD"/>
-                        <viewControllerLayoutGuide type="bottom" id="Rd6-52-iYc"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="BackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="lZN-ln-SVt">
-                                <rect key="frame" x="-97" y="-68" width="569" height="985"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="985" id="E3C-ZG-XCV"/>
-                                    <constraint firstAttribute="width" constant="569" id="G8l-wD-jnV"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="oYN-zb-mER">
+                                <rect key="frame" x="-343.66666666666669" y="-385" width="1080.3333333333333" height="1622"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CP1-yA-lqE">
-                                <rect key="frame" x="100.66666666666669" y="393" width="191.66666666666663" height="66"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                                <rect key="frame" x="100.66666666666669" y="418" width="191.66666666666663" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="Hhr-DD-wIH"/>
+                                    <constraint firstAttribute="width" constant="191.66999999999999" id="c0I-8y-3N0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
                                 <color key="textColor" systemColor="systemGray6Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIs-TR-cyn">
-                                <rect key="frame" x="35.666666666666657" y="479" width="60" height="35"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Stop">
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
-                                </buttonConfiguration>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="stopButtonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rkQ-iC-HIL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yl-59-lbI">
-                                <rect key="frame" x="165.66666666666666" y="479" width="62" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yl-59-lbI">
+                                <rect key="frame" x="230" y="504" width="62" height="35"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="9MD-Ma-gMI"/>
+                                    <constraint firstAttribute="height" constant="35" id="zXq-yU-73s"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Start">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -68,14 +51,40 @@
                                     <action selector="startButtonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="urS-Ng-fiJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIs-TR-cyn">
+                                <rect key="frame" x="100" y="504" width="60" height="35"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="hfo-ll-97E"/>
+                                    <constraint firstAttribute="height" constant="35" id="nbO-4Z-14R"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Stop">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="stopButtonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rkQ-iC-HIL"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="HCy-wD-OvD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="4yl-59-lbI" firstAttribute="leading" secondItem="zIs-TR-cyn" secondAttribute="trailing" constant="70" id="15k-bj-r3A"/>
-                            <constraint firstItem="CP1-yA-lqE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7CB-8e-EMc"/>
-                            <constraint firstItem="4yl-59-lbI" firstAttribute="top" secondItem="CP1-yA-lqE" secondAttribute="bottom" constant="20" id="8dk-HL-sib"/>
-                            <constraint firstItem="CP1-yA-lqE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gw6-yD-MNR"/>
-                            <constraint firstItem="zIs-TR-cyn" firstAttribute="top" secondItem="CP1-yA-lqE" secondAttribute="bottom" constant="20" id="xHn-we-27e"/>
+                            <constraint firstItem="CP1-yA-lqE" firstAttribute="centerX" secondItem="HCy-wD-OvD" secondAttribute="centerX" id="BMl-iE-Xit"/>
+                            <constraint firstItem="zIs-TR-cyn" firstAttribute="leading" secondItem="HCy-wD-OvD" secondAttribute="leading" constant="100" id="XDT-gp-0C0"/>
+                            <constraint firstItem="oYN-zb-mER" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Xwq-p9-Hc4"/>
+                            <constraint firstItem="oYN-zb-mER" firstAttribute="centerX" secondItem="CP1-yA-lqE" secondAttribute="centerX" id="bxv-pt-RV1"/>
+                            <constraint firstItem="zIs-TR-cyn" firstAttribute="top" secondItem="CP1-yA-lqE" secondAttribute="bottom" constant="20" id="hrU-X2-Bcc"/>
+                            <constraint firstItem="4yl-59-lbI" firstAttribute="top" secondItem="CP1-yA-lqE" secondAttribute="bottom" constant="20" id="ip8-Hi-OMF"/>
+                            <constraint firstItem="HCy-wD-OvD" firstAttribute="trailing" secondItem="4yl-59-lbI" secondAttribute="trailing" constant="101" id="l6q-7X-0c3"/>
+                            <constraint firstItem="CP1-yA-lqE" firstAttribute="centerY" secondItem="HCy-wD-OvD" secondAttribute="centerY" id="yeY-un-eqT"/>
                         </constraints>
                     </view>
                     <connections>
@@ -93,13 +102,13 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

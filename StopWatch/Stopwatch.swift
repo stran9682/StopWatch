@@ -30,7 +30,7 @@ class Stopwatch
         let seconds = Int(elaspedTime) % 60
         let milliseconds = Int((elaspedTime - Double(seconds)) * 10)
         
-        return String(format: "%02d:%02d.%d", minutes, seconds, milliseconds)
+        return String(format: "%02d:%02d.%01d", minutes, seconds, milliseconds)
     }
     
     func start ()
